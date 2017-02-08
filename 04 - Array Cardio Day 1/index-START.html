@@ -31,6 +31,52 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+    var objYear;
+    var testYear;
+    var filtered = [];
+
+    function fiveHundreds(year){
+      if (year >= 1500 && year < 1600) {
+        return true;
+        //console.log(this.first + this.last + "born in the 1500's.");
+      } else {
+        return false;
+      }
+    }
+
+    /*function testArray() {
+      for (var i = 0; i < inventors.length; i++) {
+
+        objYear = inventors[i].year;
+        testYear = fiveHundreds(objYear);
+
+        console.log("Dafuq?!");
+        console.log(objYear);
+
+        if (testYear) {
+          console.log(inventors[i].first + " " + inventors[i].last + " " + "born in the 1500's.");
+        } else {
+          console.log(inventors[i].first + " " + inventors[i].last + " " + "DIDN'T born in the 1500's.");
+        }
+      }
+    }
+
+    testArray();*/
+
+    //filtered = inventors.filter
+
+    for (var i = 0; i < inventors.length; i++) {
+
+      objYear = inventors[i].year;
+      testYear = fiveHundreds(objYear);
+
+      if (testYear) {
+        filtered.push(`${inventors[i].first + " " + inventors[i].last}`);
+      }
+    }
+  
+
+  console.log(filtered);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
